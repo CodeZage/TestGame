@@ -1,7 +1,5 @@
 package main.java.entity;
 
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 
@@ -19,24 +17,5 @@ public class PlayerActor extends Actor {
     @Override
     public void update() {
         batch.draw(sprite, xPosition, yPosition);
-        this.detectInput();
-    }
-
-    private void detectInput() {
-        if (Gdx.input.isKeyPressed(Input.Keys.W)) {
-            yPosition += 1;
-        }
-
-        if (Gdx.input.isKeyPressed(Input.Keys.A)) {
-            xPosition -= 1;
-        }
-
-        if (Gdx.input.isKeyPressed(Input.Keys.S)) {
-            yPosition -= 1;
-        }
-
-        if (Gdx.input.isKeyPressed(Input.Keys.D)) {
-            xPosition += 1;
-        }
     }
 }
